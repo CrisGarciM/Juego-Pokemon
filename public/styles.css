@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+body{
+    font-family: 'Yeon Sung', cursive;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+#sesion-personaje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*h1*/
+.titulo{
+    color: #ff0035 ;
+    font-size: 32px;
+}
+/*h2 */
+.subtitulo{
+    color: #080708;
+    font-size: 24px;
+}
+/*div contenedor de las cards*/
+.cards{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/*Tarjetas de los personajes*/
+.card{
+    background-color: #fff;
+    width: 180px;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #080708;
+}
+.card img{
+    width: 100%;
+}
+input{
+    display: none;
+}
+/*Boton de selecion de personaje*/
+#btn-personaje{
+    margin-top: 30px;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    background-color: #e01e37;
+    cursor: pointer;
+    font-family: 'Yeon Sung', cursive;
+    font-size: 18px;
+}
+/*animacion del boton para camviar cuando se pasa por ensima*/
+#btn-personaje:hover{
+    color: #e01e37;
+    background-color: #080708;
+}
+/*animacion de las tarjetas para cambiar cuando se pasa por ensima*/
+.card:hover{
+    color: #fff;
+    background-color: #080708;
+    cursor: pointer;
+}
+
+/*segunda pantalla*/
+#sesion-ataque{
+    font-family: 'Yeon Sung', cursive;
+    flex-direction: column;
+    align-items: center;
+}
+/*botones de ataque*/
+#btn-fuego{
+    color: #fff;
+    background-color: #e01e37;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 80px;
+}
+#btn-agua{
+    color: #000;
+    background-color: #00a5cf;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 80px;
+}
+#btn-tierra{
+    color: #fff;
+    background-color: #685044;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 80px;
+}
+#btn-viento{
+    color: #000;
+    background-color: #7ae582;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 80px;
+}
+/*los mensajes de la partida*/
+#mensajes{
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+#btn-reset{
+    border: none;
+    color: #000;
+    background-color: #e01e37;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    font-family: 'Yeon Sung', cursive;
+    font-size: 16px;
+}
+/*la informacion de los ataques y las vidas*/
+.cvidas{
+    display: grid;
+    grid-template-columns: 150px 150px;
+    font-size: 16px;
+}
+.tarjeta, .tarjeta1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+.tarjeta{
+    background-color: #353535;
+    color: #fff;
+}
+.tarjeta1{
+    background-color: #007f5f;
+    color: #fff;
+}
+/*Estilos para el mapa*/
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#ver-mapa button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Yeon Sung', cursive;
+    margin: 2px;
+    user-select: none;
+}
+/*Responsiv del juego*/
+@media(max-width:560px){
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-ataq{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .cvidas{
+        grid-template-columns: 100px 100px;
+    }
+}
+@media(max-width: 300px){
+    #ver-mapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

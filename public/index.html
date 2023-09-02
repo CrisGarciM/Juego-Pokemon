@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEKEPON!</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<!--selecion de mascotas -->
+    <section id="sesion-personaje">
+        <h1 class="titulo">MEKEPON!</h1>
+
+        <h2 class="subtitulo">Elegi tu Personaje:</h2>
+
+        <div id="contenedorTarjetas" class="cards">
+        <!--div para las tarjetas de los personajes-->
+        </div>
+        <button id="btn-personaje">Seleccionar</button>
+    </section>
+<!---->
+    <section id="ver-mapa">
+        <h2 class="subtitulo">Explora el mapa con tu Personaje</h2>
+        <canvas id="mapa">
+        </canvas>
+        <button ontouchstart="moverArriba()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+        <div>
+            <button ontouchstart="moverIzquierda()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+            <button ontouchstart="moverDerecha()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+        </div>
+        <button ontouchstart="moverAbajo()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+    </section>
+<!--Selecion de ataques-->
+    <section id="sesion-ataque">
+        <h1 class="titulo">MEKEPON!</h1>
+        <h2 class="subtitulo">Elige tu ataque:</h2>
+        <div id="contenedorAtq" class="btn-ataq">
+            <!--contenedor de los botones de ataque-->
+        </div>
+        <!--Informacion de la partida-->
+        <div id="mensajes">
+            <p id="res">Mucha Suerte</p>
+        <!--con el metodo appendChild se crean los mensajes-->
+            <!--Reiniciar Partida-->
+            <section id="reiniciar">
+                <button id="btn-reset">Reiniciar</button>
+            </section>
+        </div>     
+        <div class="cvidas">
+            <div class="tarjeta">
+                <p id="vidas-jugador">0</p>
+                <p id="player"></p>
+                <div id="atq"></div>
+            </div>
+            <div class="tarjeta1">
+                <p id="vidas-enemigo">0</p>
+                <p id="player-evil"></p>
+                <div id="atq-ene"></div>
+            </div>
+        </div>
+    </section>
+    <script src="./mokepon.js"></script>
+</body>
+</html>
